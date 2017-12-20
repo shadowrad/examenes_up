@@ -1,0 +1,1000 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "preguntas",
+    "model": "pregunta"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "buifejjdgnk9afsjpjy9hsff8ho7q86o",
+  "fields": {
+    "session_data": "NjI1MGQxM2JhZDcxMGU4OWU4MGMxYmE5YWYxZDIwMDY0NTlhMGNhNzp7Il9hdXRoX3VzZXJfaGFzaCI6IjdhOGQ0NWE3NGJjNzhiNDRkM2VmZTI1ZjQyYzQ0MGRlMjUyZThiNzMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2017-12-28T16:07:15.443Z"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 1,
+  "fields": {
+    "Descripcion": "Explique el concepto de pipes en Linux."
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 2,
+  "fields": {
+    "Descripcion": "Explique los distintos streams de IO que maneja Linux."
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 4,
+  "fields": {
+    "Descripcion": "\"\u00bfSi se ejecuta el comando \u201cls -la /home/alumno 2>error.txt\u201d, cual sera el contenido del\r\narchivo error.txt al terminar la ejecucion?\r\nNota: El directorio /home/alumno no esta vacio.\""
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 5,
+  "fields": {
+    "Descripcion": "Explique el concepto del dev /dev/null en Linux. \u00bfEn que situaci\u00f3n lo utilizar\u00eda?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 6,
+  "fields": {
+    "Descripcion": "\u00bfEjecutando que comando puedo saber cu\u00e1l es mi directorio actual?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 7,
+  "fields": {
+    "Descripcion": "\u00bfQue estructura tiene el archivo /etc/fstab?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 8,
+  "fields": {
+    "Descripcion": "\u00bfQue estructura tiene el archivo /etc/passwd?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 9,
+  "fields": {
+    "Descripcion": "Explique cuantos tipos de archivos hay en Linux."
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 10,
+  "fields": {
+    "Descripcion": "Explique cual es el concepto de umask."
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 11,
+  "fields": {
+    "Descripcion": "\u00bfC\u00f3mo se configura una interfaz de red con IP est\u00e1tica persistente?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 12,
+  "fields": {
+    "Descripcion": "Describa y ejemplifique alguna de las maneras de cambiar los permisos de un archivo."
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 13,
+  "fields": {
+    "Descripcion": "\u00bfQu\u00e9 es el Sticky Bit?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 14,
+  "fields": {
+    "Descripcion": "\u00bfC\u00f3mo se llama el administrador regular de procesos en segundo plano?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 15,
+  "fields": {
+    "Descripcion": "\u00bfQue encontramos en el directorio /sys/class/net?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 16,
+  "fields": {
+    "Descripcion": "\"\u00bfQue se ver\u00e1 por la pantalla al ejecutar el siguiente script?\r\n\r\n#!/bin/bash\r\n[ -d . ]; echo $?; exit 0;\""
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 17,
+  "fields": {
+    "Descripcion": "que me indica la siguiente linea sobre un archivo \"drwxr-x-w- user print\""
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 18,
+  "fields": {
+    "Descripcion": "como te conectarias por ssh a un server con ip 192.168.3.1 usuario pepe"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 19,
+  "fields": {
+    "Descripcion": "\u00bflas iptables son persistentes?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 20,
+  "fields": {
+    "Descripcion": "que hace el siguiente comando? iptables -A INPUT  -p tcp -s 192.168.1.10 --dport 22 -j DROP"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 21,
+  "fields": {
+    "Descripcion": "\u00bfcomo hago para ver todas las interfaces de red conectadas incluso las que no estan configuradas?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 22,
+  "fields": {
+    "Descripcion": "\u00bfcomo puedo ver todos los discos incluso los que no estan montados?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 23,
+  "fields": {
+    "Descripcion": "\u00bfcomo puedo buscar un PID sabiendo el nombre del proceso?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 24,
+  "fields": {
+    "Descripcion": "\u00bfun script puede recibir parametros? de ser asi \u00bfcomo los recibo?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 25,
+  "fields": {
+    "Descripcion": "\u00bfesta bien la siguiente linea? ln /etc \"LinkAetc\""
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 26,
+  "fields": {
+    "Descripcion": "\u00bfesta bien la siguiente linea? ln -s /etc \"LinkAetc\""
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 27,
+  "fields": {
+    "Descripcion": "\u00bfque hace el siguiente comando? iptables INPUT  -P DROP"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 28,
+  "fields": {
+    "Descripcion": "\u00bfComo puedo cambiar los permisos de un archivo?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 29,
+  "fields": {
+    "Descripcion": "\u00bfComo puedo setear el due\u00f1o de un archivo? (que cambiaria?)"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 30,
+  "fields": {
+    "Descripcion": "\u00bfcomo puedo obtener un listado en orden inverso de los primeros 3 archivos del directorio /bin?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 31,
+  "fields": {
+    "Descripcion": "\"\u00bfQue se ver\u00e1 por la pantalla al ejecutar el siguiente script?\r\n\r\n#!/bin/bash\r\necho $1; exit 0;\""
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 32,
+  "fields": {
+    "Descripcion": "Dentro de un script NO se pueden ejecutar los mismos comandos que desde la consola"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 33,
+  "fields": {
+    "Descripcion": "para que linux lo interprete como script debe tener como extencion .sh"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 34,
+  "fields": {
+    "Descripcion": "\u00bfque cadenas tiene la tabla filter?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 35,
+  "fields": {
+    "Descripcion": "Que es iptables?"
+  }
+},
+{
+  "model": "preguntas.pregunta",
+  "pk": 36,
+  "fields": {
+    "Descripcion": "que diferencia hay entre \"ls > lista.txt\" y \"ls >> lista.txt\""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 2,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 2,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 2,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 4,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 4,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 4,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add pregunta",
+    "content_type": 7,
+    "codename": "add_pregunta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change pregunta",
+    "content_type": 7,
+    "codename": "change_pregunta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete pregunta",
+    "content_type": 7,
+    "codename": "delete_pregunta"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$nN8y4gUHE9ND$3nUducQ1UV9GnBSR6CF1AAhgzk8O3MZMpffPB8oo1u0=",
+    "last_login": "2017-12-14T16:07:15.440Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-12-14T16:07:04.600Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2017-12-14T16:19:03.030Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Pregunta object",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2017-12-14T16:19:24.294Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Pregunta object",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2017-12-14T16:19:32.248Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Pregunta object",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2017-12-14T16:19:38.443Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Pregunta object",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2017-12-14T16:21:05.300Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "\u00bfCual de las siguientes descripciones es valida para el comando \u201ctee\u201d?",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2017-12-14T16:21:28.844Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Explique el concepto del dev /dev/null en Linux. \u00bfEn que situaci\u00f3n lo utilizar\u00eda?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2017-12-14T16:21:34.804Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "\u00bfEjecutando que comando puedo saber cu\u00e1l es mi directorio actual?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2017-12-14T16:21:40.149Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "\u00bfQue estructura tiene el archivo /etc/fstab?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2017-12-14T16:21:45.461Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "\u00bfQue estructura tiene el archivo /etc/passwd?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2017-12-14T16:21:50.341Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Explique cuantos tipos de archivos hay en Linux.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2017-12-14T16:21:57.444Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Explique cual es el concepto de umask.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2017-12-14T16:22:03.336Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "\u00bfC\u00f3mo se configura una interfaz de red con IP est\u00e1tica persistente?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2017-12-14T16:22:10.532Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Describa y ejemplifique alguna de las maneras de cambiar los permisos de un archivo.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2017-12-14T16:22:17.548Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "\u00bfQu\u00e9 es el Sticky Bit?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2017-12-14T16:22:24.494Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "\u00bfC\u00f3mo se llama el administrador regular de procesos en segundo plano?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2017-12-14T16:22:32.158Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "\u00bfQue encontramos en el directorio /sys/class/net?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2017-12-14T16:23:55.620Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "\"\u00bfQue se ver\u00e1 por la pantalla al ejecutar el siguiente script?\r\n\r\n#!/bin/bash\r\n[ -d . ]; echo $?; exit 0;\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2017-12-14T16:24:11.230Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "que me indica la siguiente linea sobre un archivo \"drwxr-x-w- user print\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2017-12-14T16:24:17.152Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "como te conectarias por ssh a un server con ip 192.168.3.1 usuario pepe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2017-12-14T16:24:22.197Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "\u00bflas iptables son persistentes?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2017-12-14T16:24:28.914Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "que hace el siguiente comando? iptables -A INPUT  -p tcp -s 192.168.1.10 --dport 22 -j DROP",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2017-12-14T16:24:34.361Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "21",
+    "object_repr": "\u00bfcomo hago para ver todas las interfaces de red conectadas incluso las que no estan configuradas?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2017-12-14T16:24:40.520Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "\u00bfcomo puedo ver todos los discos incluso los que no estan montados?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2017-12-14T16:24:45.728Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "\u00bfcomo puedo buscar un PID sabiendo el nombre del proceso?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2017-12-14T16:24:51.466Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "24",
+    "object_repr": "\u00bfun script puede recibir parametros? de ser asi \u00bfcomo los recibo?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2017-12-14T16:24:58.564Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "25",
+    "object_repr": "\u00bfesta bien la siguiente linea? ln /etc \"LinkAetc\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2017-12-14T16:25:04.661Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "26",
+    "object_repr": "\u00bfesta bien la siguiente linea? ln -s /etc \"LinkAetc\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2017-12-14T16:25:22.547Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "27",
+    "object_repr": "\u00bfque hace el siguiente comando? iptables INPUT  -P DROP",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2017-12-14T16:25:28.081Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "28",
+    "object_repr": "\u00bfComo puedo cambiar los permisos de un archivo?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2017-12-14T16:25:39.112Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "29",
+    "object_repr": "\u00bfComo puedo setear el due\u00f1o de un archivo? (que cambiaria?)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2017-12-14T16:25:46.841Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "30",
+    "object_repr": "\u00bfcomo puedo obtener un listado en orden inverso de los primeros 3 archivos del directorio /bin?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2017-12-14T16:25:53.421Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "31",
+    "object_repr": "\"\u00bfQue se ver\u00e1 por la pantalla al ejecutar el siguiente script?\r\n\r\n#!/bin/bash\r\necho $1; exit 0;\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2017-12-14T16:26:01.191Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "32",
+    "object_repr": "Dentro de un script NO se pueden ejecutar los mismos comandos que desde la consola",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2017-12-14T16:26:07.244Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "33",
+    "object_repr": "para que linux lo interprete como script debe tener como extencion .sh",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2017-12-14T16:28:22.053Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "34",
+    "object_repr": "\u00bfque cadenas tiene la tabla filter?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2017-12-14T16:28:28.165Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "35",
+    "object_repr": "Que es iptables?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2017-12-14T16:28:33.725Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "36",
+    "object_repr": "que diferencia hay entre \"ls > lista.txt\" y \"ls >> lista.txt\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
+
