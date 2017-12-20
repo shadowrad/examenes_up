@@ -1,0 +1,13 @@
+*.pyc
+local_settings.py
+.vagrant
+db.sqlite3*
+activate
+.idea
+uwsgi.pid
+uwsgi.log
+static/*
+private/
+venv/
+service/supervisor.nopenal.conf
+service/uwsgi.ini
