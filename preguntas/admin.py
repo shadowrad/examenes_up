@@ -10,7 +10,7 @@ from django.contrib.admin import ListFilter
 
 import preguntas
 from preguntas.Helper import examen_preguntas_ids
-from preguntas.models import Pregunta
+from preguntas.models import Pregunta, Materia
 from django.contrib.admin import SimpleListFilter
 
 class Cantidad_filter(SimpleListFilter):
@@ -25,7 +25,7 @@ class Cantidad_filter(SimpleListFilter):
 
     def queryset(self, request, queryset):
         if self.value() is not None:
-            randoms_id = examen_preguntas_ids(int(self.value()))
+            randoms_id = examen_preguntas_ids(int(self.value()),request.GET.get('materia__id__exact'))
             return queryset.filter(id__in=randoms_id)
 
 
@@ -49,7 +49,8 @@ class ExamenAdmin(admin.ModelAdmin):
     actions = None
     list_display_links=None
 
-    list_filter=(Cantidad_filter,)
+    list_filter=('materia',Cantidad_filter)
 
 admin.site.register(PreguntaExamen,ExamenAdmin)
 admin.site.register(Pregunta)
+admin.site.register(Materia)

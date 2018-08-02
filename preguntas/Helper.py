@@ -3,8 +3,12 @@ import random
 from preguntas.models import Pregunta
 
 
-def examen_preguntas_ids(cantidad):
-    data_ids = list(Pregunta.objects.values_list('id',flat=True))
+def examen_preguntas_ids(cantidad, materia_id):
+    if materia_id is None:
+        data_ids = list(Pregunta.objects.values_list('id', flat=True))
+    else:
+        data_ids = list(Pregunta.objects.filter(materia__id=materia_id).values_list('id',flat=True))
+
     cantidad_datos = len(data_ids)
     randoms = []
     index =0
