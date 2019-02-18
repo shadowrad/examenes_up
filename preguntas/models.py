@@ -17,6 +17,7 @@ class Materia(models.Model):
 class Pregunta(models.Model):
     Descripcion= models.TextField(verbose_name='Pregunta')
     materia = models.ForeignKey(Materia,on_delete=models.CASCADE)
+    posibilidad = models.IntegerField(default=20)
 
     def __str__(self):
         return self.Descripcion
