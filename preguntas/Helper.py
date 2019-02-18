@@ -28,6 +28,14 @@ def examen_preguntas_ids(cantidad, materia_id):
     return randoms
 
 
+def trabajar_preguntas(elegidas):
+    preguntas= Pregunta.objects.filter(id__in= elegidas)
+    for pregunta in preguntas:
+        pregunta.posibilidad -=2
+        pregunta.save()
+
+    return preguntas
+
 
 
 
@@ -45,15 +53,21 @@ def examen_preguntas_ids_frecuencia(cantidad, materia_id):
     ids_a_buscar=[]
 
     rango_busqueda = math.floor(total/cantidad)
+    rango_cantidad = math.floor(len(data_ids)/ cantidad)
 
+    desde_ids= 0
     hasta = 1
     for i in range(0, cantidad):
         desde = hasta
         hasta = desde + rango_busqueda
         nro_random = random.randrange(desde, hasta)
-        for dato in data_ids:
-            if dato['fr-desde'] < nro_random < dato['fr-hasta']:
+        for dato in data_ids[desde_ids:]:
+            if dato['fr-desde'] <= nro_random <= dato['fr-hasta']:
                 ids_a_buscar.append(dato['id'])
                 break
 
-    return data_ids
+        desde_ids +=rango_cantidad
+
+    return trabajar_preguntas(ids_a_buscar)
+
+

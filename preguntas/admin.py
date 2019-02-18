@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.contrib import admin
 
 # Register your models here.
@@ -18,6 +19,7 @@ class Cantidad_filter(SimpleListFilter):
     parameter_name = 'Cantidad Preguntas'
 
     def lookups(self, request, model_admin):
+        request.session['ultimo_uso'] = datetime.now()
         numeros=[]
         for i in range(5,55,5):
             numeros.append((i,i))
