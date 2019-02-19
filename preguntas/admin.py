@@ -14,12 +14,28 @@ from preguntas.Helper import examen_preguntas_ids, examen_preguntas_ids_frecuenc
 from preguntas.models import Pregunta, Materia
 from django.contrib.admin import SimpleListFilter
 
+class ResetFilter(SimpleListFilter):
+    title = 'para resetear frecuencias'
+    parameter_name = 'frecuencias'
+
+    def lookups(self, request, model_admin):
+        return [(1, 'reset')]
+
+    def queryset(self, request, queryset):
+        if self.value() is not None:
+            for p in Pregunta.objects.all():
+                p.posibilidad = 20
+                p.save()
+
+            return queryset
+
+
+
 class Cantidad_filter(SimpleListFilter):
     title = 'Cantidad de preguntas'
     parameter_name = 'Cantidad Preguntas'
 
     def lookups(self, request, model_admin):
-        request.session['ultimo_uso'] = datetime.now()
         numeros=[]
         for i in range(5,55,5):
             numeros.append((i,i))
@@ -41,6 +57,7 @@ class PreguntaExamen(Pregunta):
 
 
 class ExamenAdmin(admin.ModelAdmin):
+    list_display = ['posibilidad', 'Descripcion']
     model= PreguntaExamen
     def has_add_permission(self, request):
         return False
@@ -51,8 +68,12 @@ class ExamenAdmin(admin.ModelAdmin):
     actions = None
     list_display_links=None
 
-    list_filter=('materia',Cantidad_filter)
+    list_filter=('materia',Cantidad_filter,ResetFilter)
+
+class PreguntaAdmin(admin.ModelAdmin):
+    list_display = ['Descripcion','materia']
+    list_filter = ('materia',)
 
 admin.site.register(PreguntaExamen,ExamenAdmin)
-admin.site.register(Pregunta)
+admin.site.register(Pregunta,PreguntaAdmin)
 admin.site.register(Materia)
