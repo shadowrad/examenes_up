@@ -43,7 +43,7 @@ def examen_preguntas_ids_frecuencia(cantidad, materia_id):
     if materia_id is None:
         data_ids = list(Pregunta.objects.values('id', 'posibilidad'))
     else:
-        data_ids = list(Pregunta.objects.filter(materia__id=materia_id).values('id', 'posibilidad', flat=True))
+        data_ids = list(Pregunta.objects.filter(materia__id=materia_id).values('id', 'posibilidad'))
     total = 0
     for dato in data_ids:
         dato['fr-desde'] = total+1
