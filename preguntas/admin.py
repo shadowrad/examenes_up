@@ -54,7 +54,7 @@ class PreguntaExamen(Pregunta):
 
 
 class ExamenAdmin(admin.ModelAdmin):
-    list_display = ['posibilidad', 'Descripcion']
+    list_display = ['posibilidad', 'Descripcion','posibilidad']
     model = PreguntaExamen
 
     def has_add_permission(self, request):
