@@ -73,13 +73,16 @@ class PreguntaAdmin(admin.ModelAdmin):
     list_display = ['Descripcion', 'materia']
     list_filter = ('materia',)
 
+
 class PreguntasInline(admin.TabularInline):
     model = Pregunta
+
 
 class MateriaAdmin(admin.ModelAdmin):
     inlines = [
         PreguntasInline,
     ]
+
 
 admin.site.register(PreguntaExamen, ExamenAdmin)
 admin.site.register(Pregunta, PreguntaAdmin)
