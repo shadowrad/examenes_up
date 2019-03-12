@@ -10,6 +10,7 @@ from django.contrib import admin
 from django.contrib.admin import ListFilter
 
 import preguntas
+from examenes_up import settings
 from preguntas.Helper import examen_preguntas_ids, examen_preguntas_ids_frecuencia
 from preguntas.models import Pregunta, Materia, Tag
 from django.contrib.admin import SimpleListFilter
@@ -25,7 +26,7 @@ class ResetFilter(SimpleListFilter):
     def queryset(self, request, queryset):
         if self.value() is not None:
             for p in Pregunta.objects.all():
-                p.posibilidad = 20
+                p.posibilidad = settings.MAX
                 p.save()
 
             return queryset
@@ -70,8 +71,12 @@ class ExamenAdmin(admin.ModelAdmin):
 
 
 class PreguntaAdmin(admin.ModelAdmin):
-    list_display = ['Descripcion', 'materia','posibilidad']
+    list_display = ['Descripcion', 'materia','cant_seleccionada']
     list_filter = ('materia',)
+
+
+    def cant_seleccionada(self, obj):
+        return int( (settings.MAX - obj.posibilidad)/settings.RANGO)
 
 
 class PreguntasInline(admin.TabularInline):

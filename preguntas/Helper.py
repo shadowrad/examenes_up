@@ -2,6 +2,7 @@ import random
 
 import math
 
+from examenes_up import settings
 from preguntas.models import Pregunta
 
 
@@ -31,7 +32,7 @@ def examen_preguntas_ids(cantidad, materia_id):
 def trabajar_preguntas(elegidas):
     preguntas = Pregunta.objects.filter(id__in=elegidas)
     for pregunta in preguntas:
-        pregunta.posibilidad -= 2
+        pregunta.posibilidad -= settings.RANGO
         pregunta.save()
 
     return preguntas

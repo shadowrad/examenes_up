@@ -127,3 +127,6 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = u'/home/shadowrad/examenes_up/static'
 STATIC_URL = '/static/'
 ALLOWED_HOSTS= "*"
+
+MAX = 50
+RANGO = 5
