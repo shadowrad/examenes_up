@@ -44,7 +44,7 @@ class Cantidad_filter(SimpleListFilter):
 
     def queryset(self, request, queryset):
         if self.value() is not None:
-            randoms_id = examen_preguntas_ids_frecuencia(int(self.value()), request.GET.get('materia__id__exact'))
+            randoms_id = examen_preguntas_ids(int(self.value()), request.GET.get('materia__id__exact'))
             return queryset.filter(id__in=randoms_id)
 
 
