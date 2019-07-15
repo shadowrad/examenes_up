@@ -4,6 +4,11 @@ from django.db import models
 from examenes_up import settings
 
 
+Niveles = (
+        ('FACIL', 'Facil'),
+        ('INTERMEDIO', 'Intermedio'),
+        ('DIFICIL', 'Dificil'),
+    )
 class Tag(models.Model):
     Descripcion = models.CharField(verbose_name='Tag', max_length=100)
 
@@ -26,6 +31,7 @@ class Materia(models.Model):
 
 
 class Pregunta(models.Model):
+    nivel = models.CharField(max_length=20, choices=Niveles)
     Descripcion= models.TextField(verbose_name='Pregunta')
     materia = models.ForeignKey(Materia,on_delete=models.CASCADE)
     posibilidad = models.IntegerField(default=settings.MAX)

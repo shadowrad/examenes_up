@@ -15,7 +15,10 @@ from preguntas.Helper import examen_preguntas_ids, examen_preguntas_ids_frecuenc
 from preguntas.models import Pregunta, Materia, Tag
 from django.contrib.admin import SimpleListFilter
 
-
+def set_dificultad(dificultad, queryset):
+        rows_updated = queryset.update(nivel=dificultad)
+        message = "%s preguntas modificadas" % rows_updated
+        return message
 class ResetFilter(SimpleListFilter):
     title = 'para resetear frecuencias'
     parameter_name = 'frecuencias'
@@ -71,16 +74,32 @@ class ExamenAdmin(admin.ModelAdmin):
 
 
 class PreguntaAdmin(admin.ModelAdmin):
-    list_display = ['Descripcion', 'materia','cant_seleccionada']
+    list_display = ['Descripcion', 'materia','nivel']
     list_filter = ('materia',)
 
+    def marcar_dificil(self, request, queryset):
+        mensaje = set_dificultad('DIFICIL', queryset)
+        self.message_user(request, mensaje)
+
+    def marcar_intemedio(self, request, queryset):
+        mensaje = set_dificultad('INTERMEDIO', queryset)
+        self.message_user(request, mensaje)
+
+    def marcar_facil(self, request, queryset):
+        mensaje = set_dificultad('FACIL', queryset)
+        self.message_user(request, mensaje)
+
+    actions = ['marcar_dificil','marcar_intemedio','marcar_facil']
 
     def cant_seleccionada(self, obj):
         return int( (settings.MAX - obj.posibilidad)/settings.RANGO)
 
 
 class PreguntasInline(admin.TabularInline):
+
     model = Pregunta
+
+
 
 
 class MateriaAdmin(admin.ModelAdmin):
