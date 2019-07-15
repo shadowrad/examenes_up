@@ -70,7 +70,7 @@ class ExamenAdmin(admin.ModelAdmin):
     actions = None
     list_display_links = None
 
-    list_filter = ('materia', 'tags', Cantidad_filter, ResetFilter)
+    list_filter = ('materia', 'tags', 'nivel', Cantidad_filter, ResetFilter)
 
 
 class PreguntaAdmin(admin.ModelAdmin):
@@ -89,7 +89,7 @@ class PreguntaAdmin(admin.ModelAdmin):
         mensaje = set_dificultad('FACIL', queryset)
         self.message_user(request, mensaje)
 
-    actions = ['marcar_dificil','marcar_intemedio','marcar_facil']
+    actions = ['marcar_dificil','marcar_intemedio::','marcar_facil']
 
     def cant_seleccionada(self, obj):
         return int( (settings.MAX - obj.posibilidad)/settings.RANGO)
