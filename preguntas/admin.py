@@ -58,8 +58,15 @@ class PreguntaExamen(Pregunta):
 
 
 class ExamenAdmin(admin.ModelAdmin):
-    list_display = ['posibilidad', 'Descripcion']
+    line_numbering = 0
+
     model = PreguntaExamen
+
+    def line_number(self, obj):
+        self.line_numbering += 1
+        return self.line_numbering
+
+    line_number.short_description = '#'
 
     def has_add_permission(self, request):
         return False
@@ -69,7 +76,7 @@ class ExamenAdmin(admin.ModelAdmin):
 
     actions = None
     list_display_links = None
-
+    list_display = ['line_number', 'Descripcion']
     list_filter = ('materia', 'tags', 'nivel', Cantidad_filter, ResetFilter)
 
 
