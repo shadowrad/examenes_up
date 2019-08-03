@@ -76,12 +76,12 @@ class ExamenAdmin(admin.ModelAdmin):
 
     actions = None
     list_display_links = None
-    list_display = ['line_number', 'Descripcion']
+    list_display = ['line_number', 'descripcion']
     list_filter = ('materia', 'tags', 'nivel', Cantidad_filter, ResetFilter)
 
 
 class PreguntaAdmin(admin.ModelAdmin):
-    list_display = ['Descripcion', 'materia','nivel']
+    list_display = ['descripcion', 'materia','nivel']
     list_filter = ('materia',)
 
     def marcar_dificil(self, request, queryset):
