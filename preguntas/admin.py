@@ -74,6 +74,11 @@ class ExamenAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
 
+    def get_queryset(self, request):
+        self.line_numbering = 0
+        qs = super().get_queryset(request)
+        return qs
+
     actions = None
     list_display_links = None
     list_display = ['line_number', 'descripcion']

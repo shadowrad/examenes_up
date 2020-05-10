@@ -28,6 +28,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     path('parcial-ean/', view_generador.parcial_ean),
+    path('parcial-up/', view_generador.parcial_up),
 ]
 
 admin.site.site_header = "Examenes Admin"

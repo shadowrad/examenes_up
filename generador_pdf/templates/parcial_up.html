@@ -1,0 +1,178 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>EXAMEN</title>
+</head>
+<body>
+<form method="post" >
+    {% csrf_token %}
+<div style="position: absolute;left:240px;top:30px">
+<p><strong><img src="https://lh4.googleusercontent.com/NAItcvooopAlHeipvhoGKUx07K6tFolqWNziI1Hdu1mp2SeRBkRCUfBzfYO-zNc2RWKlOAkk23QBmcNLEy0Uo9chx_1WU8dGU65MJluQVmP-bT8GWAfmmF04iRza4XzoZpti4fYo" style="height:48px; width:410px" /></strong></p>
+</div>
+<p>&nbsp;</p>
+
+<div style="position: absolute;left: 100px;top:100px;width:810px">
+
+    <div style="width:810px;border: 3px solid;">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Fecha:</strong></p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Turno:</strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+               <strong> Asignatura:</strong>
+                    {% if materia %}
+                        {{materia.Descripcion}}
+                <input type="hidden" name="materia_id"  value="{{materia.id}}" >
+                    {% else %}
+
+                    <select name="materia_id" style="display: inline-block;">
+                        <option> ---------------</option>
+                        {%for materia in materias %}
+                        <option value="{{ materia.id}}"> {{ materia.Descripcion }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="start" style="display: inline-block;">
+                    {%endif%}
+
+            </div>
+            <div class="col-md-6">
+                <p><strong>Profesor:</strong> Ing. Rodrigo Durán </p>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Email:</strong></p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Legajo:</strong></p>
+            </div>
+        </div>
+
+
+        <p><strong>Instancia: 1er parcial&nbsp;<img
+                src="https://docs.google.com/drawings/u/0/d/sD0MxNF-DLWMD_24EQyfsqQ/image?w=20&amp;h=23&amp;rev=1&amp;ac=1&amp;parent=1XjSXP25GNXy5x2X3XEKIhMKsoq_h5g5xZnkjmmWEcIs"
+                style="height:23px; width:20px"/>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+            2do parcial&nbsp;<img
+                    src="https://docs.google.com/drawings/u/0/d/sd_fkYmxAr1QmXvtTJKu6Kg/image?w=20&amp;h=23&amp;rev=1&amp;ac=1&amp;parent=1XjSXP25GNXy5x2X3XEKIhMKsoq_h5g5xZnkjmmWEcIs"
+                    style="height:23px; width:20px"/>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            &nbsp;
+            Final&nbsp;&nbsp;<img
+                    src="https://docs.google.com/drawings/u/0/d/s4MuE2Y7xWcbI1eLTNKHbJQ/image?w=20&amp;h=23&amp;rev=1&amp;ac=1&amp;parent=1XjSXP25GNXy5x2X3XEKIhMKsoq_h5g5xZnkjmmWEcIs"
+                    style="height:23px; width:20px"/></strong></p>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12" style="top:30px;">
+            <p><strong>- Consignas claramente expresadas:&nbsp;</strong></p>
+            {% if materia %}
+            <p><strong>Responda las siguientes preguntas</strong> <input type="submit" value="refrescar" style="display: inline-block;"></p>
+
+            <ol>
+                {% for pregunta in preguntas %}
+                <li style="margin: 10px 0;" >
+                    {{pregunta.Descripcion|safe }}
+                </li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <p><strong style="color:red"> seleccione una asignatura&nbsp;</strong></p>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="top:30px;">
+            <p><strong>-Objetivos:</strong></p>
+            <ul>
+                <li style="top:10px">
+                    <p>Transferir los saberes adquiridos en la resoluci&oacute;n de las actividades propuestas.</p>
+                </li>
+                <li>
+                    <p>Argumentar (la toma de decisiones / las respuestas) a la luz de la bibliograf&iacute;a
+                        trabajada.</p>
+                </li>
+                <li>
+                    <p>Aplicar los conocimientos adquiridos en el an&aacute;lisis y resoluci&oacute;n de situaciones
+                        problem&aacute;ticas.</p>
+                </li>
+                <li>
+                    <p>Integrar los contenidos desarrollados en las unidades tem&aacute;ticas en la resoluci&oacute;n de
+                        las
+                        actividades propuestas.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12" style="top:30px;">
+
+            <p><strong>- Criterios que se tendr&aacute;n en cuenta para la aprobaci&oacute;n del examen:&nbsp;</strong>
+            </p>
+
+            <ul>
+                <li>
+                    <p>Capacidad para transferir los saberes adquiridos en la resoluci&oacute;n de actividades
+                        propuestas.</p>
+                </li>
+                <li>
+                    <p>Capacidad para argumentar las respuestas a la luz de la bibliograf&iacute;a trabajada.</p>
+                </li>
+                <li>
+                    <p>Capacidad para tomar decisiones reflexivas y argumentadas conceptualmente.</p>
+                </li>
+                <li>
+                    <p>Dominio de un vocabulario t&eacute;cnico-disciplinar.</p>
+                </li>
+                <li>
+                    <p>Coherencia y cohesi&oacute;n en la escritura.</p>
+                </li>
+                <li>
+                    <p>Capacidad para transferir los aspectos te&oacute;ricos y pr&aacute;cticos en el desarrollo de las
+                        consignas.</p>
+                </li>
+                <li>
+                    <p>Habilidad para integrar los conocimientos adquiridos.</p>
+                </li>
+                <li>
+                    <p>Cualquier respuesta parcial o total que se evidencia haya sido copiada de Internet, ser&aacute; v&aacute;lido
+                        para que quede descalificada.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</div>
+</form>
+</body>
+</html>
