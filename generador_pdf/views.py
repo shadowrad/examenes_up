@@ -1,10 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 # Create your views here.
 from preguntas.Helper import examen_preguntas_ids
 from preguntas.models import Pregunta, Materia
 
-
+@login_required
 def parcial_ean(request):
     materia = None
     materias = []
