@@ -92,10 +92,8 @@
         <div class="col-md-12" style="top:30px;">
             <p><strong>- Consignas claramente expresadas:&nbsp;</strong></p>
             {% if materia %}
+            <p><strong>Responda las siguientes preguntas</strong> <input type="submit" value="refrescar" style="display: inline-block;"></p>
 
-            <h3>Responda las siguientes preguntas</h3>
-            <input type="submit" value="re-iniciar" style="display: inline-block;">
-            {% endif %}
             <ol>
                 {% for pregunta in preguntas %}
                 <li>
@@ -103,6 +101,10 @@
                 </li>
                 {% endfor %}
             </ol>
+            {% else %}
+            <p><strong style="color:red"> seleccione una asignatura&nbsp;</strong></p>
+            {% endif %}
+
         </div>
     </div>
 
