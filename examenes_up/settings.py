@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '82hu3b14bc4du^_5z2l&i$t^b&j+ql-pz12a0=)mm!4q20$vc3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [u'shadowrad.pythonanywhere.com']
 

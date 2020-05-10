@@ -29,3 +29,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     path('parcial-ean/', view_generador.parcial_ean),
 ]
+
+admin.site.site_header = "Examenes Admin"
+admin.site.site_title = "Examenes Admin Portal"
+admin.site.index_title = "Bienvenido al portal de Examenes"
