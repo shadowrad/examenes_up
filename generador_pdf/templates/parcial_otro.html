@@ -11,6 +11,8 @@
     <title>EXAMEN</title>
 </head>
 <body>
+<form method="post" >
+    {% csrf_token %}
 <div style="position: absolute;left:740px;">
     <p><strong><img
             src="https://lh6.googleusercontent.com/HwPcU1pRaFq25CMBJVuU08a5uiKzoKSRdXXpxCuKts2bYmnCM5BGOEv5Qu3yPOymH7XxZUwYCjSha3HzPLz1BBbawk_dKTVGIHonV6YZUnwQU1eTM9Z78_X3WxPQu_GIQQ9tlrUPxno8p8pBgA"
@@ -31,22 +33,26 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <p><strong>Asignatura:&nbsp;</strong>
+               <strong> Asignatura:</strong>
                     {% if materia %}
+                        {{materia.Descripcion}}
+                <input type="hidden" name="materia_id"  value="{{materia.id}}" >
                     {% else %}
-                    <select name="materia" style="display: inline-block;">
-                        <option> ---------------</option>
 
+                    <select name="materia_id" style="display: inline-block;">
+                        <option> ---------------</option>
                         {%for materia in materias %}
                         <option value="{{ materia.id}}"> {{ materia.Descripcion }}</option>
                         {% endfor %}
                     </select>
+                    <input type="submit" value="start" style="display: inline-block;">
                     {%endif%}
 
             </div>
             <div class="col-md-6">
                 <p><strong>Profesor:</strong> Ing. Rodrigo Durán </p>
             </div>
+
 
         </div>
 
@@ -81,6 +87,24 @@
 
     </div>
 
+
+    <div class="row">
+        <div class="col-md-12" style="top:30px;">
+            <p><strong>- Consignas claramente expresadas:&nbsp;</strong></p>
+            {% if materia %}
+
+            <h3>Responda las siguientes preguntas</h3>
+            <input type="submit" value="re-iniciar" style="display: inline-block;">
+            {% endif %}
+            <ol>
+                {% for pregunta in preguntas %}
+                <li>
+                    {{pregunta.Descripcion|safe }}
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-12" style="top:30px;">
@@ -146,20 +170,6 @@
     </div>
 
 
-    <div class="row">
-        <div class="col-md-12" style="top:30px;">
-            <p><strong>- Consignas claramente expresadas:&nbsp;</strong></p>
-            <h3>Responda las siguientes preguntas</h3>
-            <ol>
-                {% for pregunta in preguntas %}
-                <li>
-                    {{pregunta.Descripcion|safe }}
-                </li>
-                {% endfor %}
-            </ol>
-        </div>
-    </div>
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -171,5 +181,6 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
 </div>
+</form>
 </body>
 </html>
