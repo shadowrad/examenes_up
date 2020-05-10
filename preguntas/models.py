@@ -39,7 +39,7 @@ class Pregunta(models.Model):
     Descripcion= RichTextField(verbose_name='Pregunta')
     materia = models.ForeignKey(Materia,on_delete=models.CASCADE)
     posibilidad = models.IntegerField(default=settings.MAX)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, blank=True)
 
 
     def __str__(self):

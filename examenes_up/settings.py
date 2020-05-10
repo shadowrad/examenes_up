@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'preguntas',
     'rest_framework',
     'ckeditor',
+    'generador_pdf'
 ]
 
 MIDDLEWARE = [
