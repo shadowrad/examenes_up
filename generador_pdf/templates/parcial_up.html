@@ -37,13 +37,11 @@
                 <input type="hidden" name="materia_id"  value="{{materia.id}}" >
                     {% else %}
 
-                    <select name="materia_id" style="display: inline-block;">
-                        <option> ---------------</option>
+                    <select class="form-control input-sm" name="materia_id" style="display: inline-block;width: fit-content;">
                         {%for materia in materias %}
                         <option value="{{ materia.id}}"> {{ materia.Descripcion }}</option>
                         {% endfor %}
                     </select>
-                    <input type="submit" value="start" style="display: inline-block;">
                     {%endif%}
 
             </div>
@@ -77,12 +75,22 @@
 
     </div>
 
+<div class="row">
+    <div class="col-md-12">
+        <p><strong>Cantidad de preguntas:</strong><input style="display: inline;width:80px;" class="form-control"  type="number" name="cantidad" value={{cantidad}} /></p>
+        {% if materia %}
+        <p><strong>Responda las siguientes preguntas</strong> <input type="submit" value="refrescar" style="display: inline-block;"></p>
+        {% else %}
+            <p><strong style="color:red"> seleccione una asignatura&nbsp;</strong></p>
+            <input type="submit" value="Comenzar" style="display: inline-block;">
+        {% endif %}
+
+    </div>
+
+</div>
 
     <div class="row">
         <div class="col-md-12" style="top:30px;">
-            <p><strong>- Consignas claramente expresadas:&nbsp;</strong></p>
-            {% if materia %}
-            <p><strong>Responda las siguientes preguntas</strong> <input type="submit" value="refrescar" style="display: inline-block;"></p>
 
             <ol>
                 {% for pregunta in preguntas %}
@@ -91,73 +99,7 @@
                 </li>
                 {% endfor %}
             </ol>
-            {% else %}
-            <p><strong style="color:red"> seleccione una asignatura&nbsp;</strong></p>
-            {% endif %}
 
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12" style="top:30px;">
-            <p><strong>-Objetivos:</strong></p>
-            <ul>
-                <li style="top:10px">
-                    <p>Transferir los saberes adquiridos en la resoluci&oacute;n de las actividades propuestas.</p>
-                </li>
-                <li>
-                    <p>Argumentar (la toma de decisiones / las respuestas) a la luz de la bibliograf&iacute;a
-                        trabajada.</p>
-                </li>
-                <li>
-                    <p>Aplicar los conocimientos adquiridos en el an&aacute;lisis y resoluci&oacute;n de situaciones
-                        problem&aacute;ticas.</p>
-                </li>
-                <li>
-                    <p>Integrar los contenidos desarrollados en las unidades tem&aacute;ticas en la resoluci&oacute;n de
-                        las
-                        actividades propuestas.</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-md-12" style="top:30px;">
-
-            <p><strong>- Criterios que se tendr&aacute;n en cuenta para la aprobaci&oacute;n del examen:&nbsp;</strong>
-            </p>
-
-            <ul>
-                <li>
-                    <p>Capacidad para transferir los saberes adquiridos en la resoluci&oacute;n de actividades
-                        propuestas.</p>
-                </li>
-                <li>
-                    <p>Capacidad para argumentar las respuestas a la luz de la bibliograf&iacute;a trabajada.</p>
-                </li>
-                <li>
-                    <p>Capacidad para tomar decisiones reflexivas y argumentadas conceptualmente.</p>
-                </li>
-                <li>
-                    <p>Dominio de un vocabulario t&eacute;cnico-disciplinar.</p>
-                </li>
-                <li>
-                    <p>Coherencia y cohesi&oacute;n en la escritura.</p>
-                </li>
-                <li>
-                    <p>Capacidad para transferir los aspectos te&oacute;ricos y pr&aacute;cticos en el desarrollo de las
-                        consignas.</p>
-                </li>
-                <li>
-                    <p>Habilidad para integrar los conocimientos adquiridos.</p>
-                </li>
-                <li>
-                    <p>Cualquier respuesta parcial o total que se evidencia haya sido copiada de Internet, ser&aacute; v&aacute;lido
-                        para que quede descalificada.</p>
-                </li>
-            </ul>
         </div>
     </div>
 

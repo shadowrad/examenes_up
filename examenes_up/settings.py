@@ -133,3 +133,8 @@ ALLOWED_HOSTS= "*"
 
 MAX = 50
 RANGO = 5
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
