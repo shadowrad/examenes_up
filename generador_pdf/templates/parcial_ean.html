@@ -1,27 +1,14 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "parcial_base.html" %}
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>EXAMEN</title>
-</head>
-<body>
-<form method="post" >
-    {% csrf_token %}
+   {% block logo %}
 <div style="position: absolute;left:740px;">
     <p><strong><img
             src="https://lh6.googleusercontent.com/HwPcU1pRaFq25CMBJVuU08a5uiKzoKSRdXXpxCuKts2bYmnCM5BGOEv5Qu3yPOymH7XxZUwYCjSha3HzPLz1BBbawk_dKTVGIHonV6YZUnwQU1eTM9Z78_X3WxPQu_GIQQ9tlrUPxno8p8pBgA"
             style="height:66px; width:174px"/></strong></p>
 </div>
-<p>&nbsp;</p>
+{% endblock %}
 
-<div style="position: absolute;left: 100px;top:100px;width:810px">
-
+{% block datos %}
     <div style="width:810px;border: 3px solid;">
         <div class="row">
             <div class="col-md-6">
@@ -32,20 +19,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+             <div class="col-md-6">
                <strong> Asignatura:</strong>
                     {% if materia %}
                         {{materia.Descripcion}}
                 <input type="hidden" name="materia_id"  value="{{materia.id}}" >
                     {% else %}
 
-                    <select name="materia_id" style="display: inline-block;">
-                        <option> ---------------</option>
+                    <select class="form-control input-sm" name="materia_id" style="display: inline-block;width: fit-content;">
                         {%for materia in materias %}
                         <option value="{{ materia.id}}"> {{ materia.Descripcion }}</option>
                         {% endfor %}
                     </select>
-                    <input type="submit" value="start" style="display: inline-block;">
                     {%endif%}
 
             </div>
@@ -86,28 +71,9 @@
                     style="height:23px; width:20px"/></strong></p>
 
     </div>
+{% endblock %}
 
-
-    <div class="row">
-        <div class="col-md-12" style="top:30px;">
-            <p><strong>- Consignas claramente expresadas:&nbsp;</strong></p>
-            {% if materia %}
-            <p><strong>Responda las siguientes preguntas</strong> <input type="submit" value="refrescar" style="display: inline-block;"></p>
-
-            <ol>
-                {% for pregunta in preguntas %}
-                <li>
-                    {{pregunta.Descripcion|safe }}
-                </li>
-                {% endfor %}
-            </ol>
-            {% else %}
-            <p><strong style="color:red"> seleccione una asignatura&nbsp;</strong></p>
-            {% endif %}
-
-        </div>
-    </div>
-
+{% block objetivos %}
     <div class="row">
         <div class="col-md-12" style="top:30px;">
             <p><strong>-Objetivos:</strong></p>
@@ -131,8 +97,8 @@
             </ul>
         </div>
     </div>
-
-
+{% endblock %}
+{% block criterios %}
     <div class="row">
         <div class="col-md-12" style="top:30px;">
 
@@ -170,19 +136,4 @@
             </ul>
         </div>
     </div>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-</div>
-</form>
-</body>
-</html>
+{% endblock %}

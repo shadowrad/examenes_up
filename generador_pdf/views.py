@@ -18,7 +18,7 @@ def parcial_ean(request):
     else:
         materias = Materia.objects.all()
 
-    return render(request,'parcial_otro.html', {'preguntas':preguntas,'materias':materias, 'materia': materia})
+    return render(request,'parcial_ean.html', {'preguntas':preguntas,'materias':materias, 'materia': materia})
 
 
 def parcial_up(request):
